@@ -31,8 +31,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   max-width: 480px;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .backdrop {
@@ -251,7 +251,7 @@ textarea {
 //* Button */
 
 .button {
-  // display: flex;
+  display: flex;
   flex-wrap: wrap;
   border: 1px solid transparent;
   justify-content: start;
@@ -268,8 +268,8 @@ textarea {
   &.secondary {
     display: inline-block;
     border-radius: 4px;
-    //padding: 10px 32px;
-    //min-width: 200px;
+    padding: 10px 32px;
+    min-width: 200px;
     cursor: pointer;
 
     color: $primaryWhiteColor;
@@ -280,20 +280,33 @@ textarea {
     font-size: 16px;
     line-height: 1.88;
   }
-}
-//.button-element {
-//  .button .button-elemrnt:not(:last-child) {
-//    margin-bottom: 15px;
-//}
+  &-menu {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
-//.button .button-element + .button-element {
-//  margin-left: 8px;
-//}
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.button-element {
+.button .button-elemrnt:not(:last-child) {
+ margin-bottom: 15px;
+}
+
+.button .button-element + .button-element {
+ margin-left: 8px;
+}
 .button.primary {
-  //  padding: 6px 22px;
-  //border-radius: 4px;
-  //min-width: 73px;
-  //cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  min-width: 73px;
+  cursor: pointer;
 
   color: $titleTextColor;
   background-color: $buttonBgColor;

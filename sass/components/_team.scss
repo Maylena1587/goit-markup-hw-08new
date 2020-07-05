@@ -6,20 +6,25 @@
   background: #ffffff;
 }
 .main-network {
-  //display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  //& .network + .network {
-  //  margin-left: 10px;
-  //}
+  & .network + .network {
+    margin-left: 10px;
+  }
 }
 .network-link {
-  // display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  // width: 44px;
-  // height: 44px;
+  width: 44px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+  list-style: none;
   border-radius: 50%;
   background-color: $primaryWhiteColor;
 
@@ -44,6 +49,6 @@
   margin-bottom: 16px;
   text-align: center;
 }
-//.list .network + .network {
-//  margin-left: 10px;
-//}
+.list .network + .network {
+  margin-left: 10px;
+}

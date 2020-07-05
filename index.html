@@ -24,8 +24,13 @@
               <span class="logo-accent">Web</span> Studio
             </p>
           </a>
-         </nav> 
-         <div class="menu">
+          <button type="button" class="button-menu" aria-expanded="false" data-menu-button>
+            <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+              <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+         <div class="menu" id="menu" data-menu>
           <ul class="site-nav list">
             <li class="item">
               <a href="./index.html" class="link current">Студия</a>
@@ -55,20 +60,23 @@
               </li>
             </ul>
          </div>
+        </nav>
      </div>
    </header>
 
     <main>
       <!--Герой-->
       <section class="hero">
-        <div class="hero-container overlay">
-          <h1 class="hero-title">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
-          <button type="button" class="button secondary" data-modal-open>
-            Заказать услугу
-          </button>
+        <div class="hero-container">
+          <div class="overlay">
+            <h1 class="hero-title">
+              Эффективные решения <br />
+              для вашего бизнеса
+            </h1>
+            <button type="button" class="button secondary" data-modal-open>
+              Заказать услугу
+            </button>
+          </div>
         </div>
       </section>
 
@@ -184,7 +192,7 @@
               <div class="profile">
                 <h3 class="title">John Smith</h3>
                 <p class="position">Product Designer</p>
-                <ul class="list main-network">
+                <ul class="main-network">
                   <li class="network">
                     <a href="" class="network-link">
                       <svg width="20" height="20" class="icon">
@@ -230,7 +238,7 @@
               <div class="profile">
                 <h3 class="title">Marta Stewart</h3>
                 <p class="position">Frontend Developer</p>
-                <ul class="list main-network">
+                <ul class="main-network">
                   <li class="network">
                     <a href="" class="network-link">
                       <svg width="20" height="20" class="icon">
@@ -276,7 +284,7 @@
               <div class="profile">
                 <h3 class="title">Robert Jakis</h3>
                 <p class="position">Marketing</p>
-                <ul class="list main-network">
+                <ul class="main-network">
                   <li class="network">
                     <a href="" class="network-link">
                       <svg width="20" height="20" class="icon">
@@ -322,7 +330,7 @@
               <div class="profile">
                 <h3 class="title">Martin Doe</h3>
                 <p class="position">UI Designer</p>
-                <ul class="list main-network">
+                <ul class="main-network">
                   <li class="network">
                     <a href="" class="network-link">
                       <svg width="20" height="20" class="icon">
@@ -601,6 +609,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script>
       (() => {
         document
