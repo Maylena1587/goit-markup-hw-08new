@@ -1,0 +1,38 @@
+.customers-title {
+  text-decoration: none;
+}
+
+//.customers .examples {
+//display: flex;
+//justify-content: center;
+//align-items: center;
+//width: 170px;
+//height: 90px;
+// & + .examples {
+//  margin-left: 30px;
+// }
+//}
+.examples-icon {
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 170px;
+  // height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+  &:hover .icon,
+  &:focus .icon {
+    fill: $accentColor;
+  }
+}
+
+.icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

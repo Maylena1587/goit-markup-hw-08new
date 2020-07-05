@@ -1,0 +1,308 @@
+.logo-words,
+.footer-words {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-list {
+  @extend .img;
+}
+
+.img-team {
+  @extend .img;
+}
+.shadow-box {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+body {
+  color: $primaryTextColor;
+  background-color: $primaryWhiteColor;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 480px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  //min-width: 528px;
+  //min-height: 581px;
+
+  background: $primaryWhiteColor;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  &-text {
+    margin-top: 0;
+    // margin-bottom: 30px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $titleTextColor;
+  }
+}
+
+.form {
+  // width: 528px;
+  // padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  &-field {
+    position: relative;
+    // display: flex;
+    //flex-direction: column;
+    //margin-bottom: 28px;
+  }
+  &-comment {
+    // display: flex;
+    flex-direction: column;
+    // margin-bottom: 20px;
+  }
+}
+
+.form-lable {
+  // position: absolute;
+  top: 50%;
+  left: 42px;
+  //transform: translateY(-50%);
+  //margin-bottom: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input {
+  margin: 0;
+  //padding-top: 11px;
+  // padding-right: 16px;
+  //padding-left: 42px;
+  // padding-bottom: 11px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+  &:focus + .form-lable,
+  &:not(:placeholder-shown) + .form-lable {
+    transform: translateY(-50px);
+    left: 16px;
+    color: $accentColor;
+  }
+}
+
+.form-icon {
+  display: inline-block;
+  //position: absolute;
+  //top: 50%;
+  //left: 16px;
+  transform: translateY(-50%);
+  fill: #000000;
+}
+.form-input:focus ~ .form-icon {
+  fill: $accentColor;
+}
+textarea {
+  resize: none;
+  //padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.lable {
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  //margin-bottom: 30px;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: $primaryTextColor;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  &-icon {
+    display: block;
+    // margin-right: 8.48px;
+    // width: 15px;
+    // height: 15px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:checked + .checkbox-icon {
+    background-color: $accentColor;
+    border-color: $accentColor;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.agreement {
+  // margin-right: 4px;
+  &-conditions {
+    text-decoration-line: underline;
+    color: $accentColor;
+  }
+}
+
+.submit {
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // padding-right: 55px;
+  // padding-left: 56px;
+  border: $accentColor;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $primaryWhiteColor;
+  background: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  &-button {
+    //display: flex;
+    // padding-right: 28px;
+    // padding-left: 28px;
+    justify-content: space-between;
+    //min-width: 200px;
+    cursor: pointer;
+  }
+}
+
+.close {
+  // position: absolute;
+  //display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  //top: -10px;
+  //right: -10px;
+  padding: 0;
+  border: 0;
+  //width: 30px;
+  //height: 30px;
+
+  background-color: $primaryWhiteColor;
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+//* Button */
+
+.button {
+  // display: flex;
+  flex-wrap: wrap;
+  border: 1px solid transparent;
+  justify-content: start;
+  padding-bottom: 40px;
+  color: $titleTextColor;
+  background-color: $primaryWhiteColor;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+  text-align: center;
+  &.secondary {
+    display: inline-block;
+    border-radius: 4px;
+    //padding: 10px 32px;
+    //min-width: 200px;
+    cursor: pointer;
+
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+//.button-element {
+//  .button .button-elemrnt:not(:last-child) {
+//    margin-bottom: 15px;
+//}
+
+//.button .button-element + .button-element {
+//  margin-left: 8px;
+//}
+.button.primary {
+  //  padding: 6px 22px;
+  //border-radius: 4px;
+  //min-width: 73px;
+  //cursor: pointer;
+
+  color: $titleTextColor;
+  background-color: $buttonBgColor;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+  }
+}

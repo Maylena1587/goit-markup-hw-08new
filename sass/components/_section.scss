@@ -1,0 +1,87 @@
+//* section */
+
+//.section {
+//padding-top: 94px;
+//padding-bottom: 94px;
+//}
+.section-title {
+  margin-top: 0px;
+  //  margin-bottom: 50px;
+
+  color: $titleTextColor;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+//* feature */
+
+.feature-list .title {
+  // display: flex;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $titleTextColor;
+}
+.work-list .title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: rgba(47, 48, 58, 0.8);
+  color: $primaryWhiteColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature-list .text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.feature-list .title,
+.team-list .title {
+  margin-top: 0px;
+  // margin-bottom: 10px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: Roboto;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+
+  color: $primaryTextColor;
+}
+
+.advantages {
+  //display: flex;
+  //margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  // height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+//.work-list,
+//.team-list {
+//  display: flex;
+//}
+
+.activity {
+  position: relative;
+  // width: 370px;
+}
+.working {
+  // position: absolute;
+  bottom: 0;
+  // width: 100%;
+  // padding: 27px 0px 27px 0px;
+}

@@ -1,0 +1,49 @@
+.team {
+  background: #f5f4fa;
+}
+.profile {
+  // padding: 30px 32px 24px 32px;
+  background: #ffffff;
+}
+.main-network {
+  //display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //& .network + .network {
+  //  margin-left: 10px;
+  //}
+}
+.network-link {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 44px;
+  // height: 44px;
+  border-radius: 50%;
+  background-color: $primaryWhiteColor;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: $accentColor;
+  }
+  &:hover .icon {
+    fill: $primaryWhiteColor;
+  }
+}
+
+.team-list .title {
+  color: $titleTextColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+.position {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+//.list .network + .network {
+//  margin-left: 10px;
+//}
